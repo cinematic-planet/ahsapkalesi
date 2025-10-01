@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahsapkalesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      color: #3e2f1c;
+      background-color: #fdf6ec;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .page-title {
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+
+    .page-title h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      color: #4b3f2f;
+      margin: 0;
+    }
+
+    .page-title p {
+      font-style: italic;
+      color: #6e4b2f;
+      margin-top: 5px;
+    }
+
+    .modern-menu {
+      background: linear-gradient(to right, #e0c097, #d4b483);
+      padding: 12px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .modern-menu ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+    }
+
+    .modern-menu li a {
+      text-decoration: none;
+      color: #3e2f1c;
+      font-weight: 600;
+      font-family: 'Lato', sans-serif;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .modern-menu li a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #a0522d;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 40px;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide-controls {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .slide-controls button {
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      margin: 0 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .slide-controls button:hover {
+      background-color: #8b4513;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      width: 100%;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Lato', sans-serif;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #8b4513;
+    }
+    
+    .map-container {
+      max-height: 300px;
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="images/ahsapkalesi-header.jpg" alt="Ahsapkalesi Banner">
+  </div>
+
+  <div class="page-title">
+    <h1>Ahsapkalesi</h1>
+    <p>Doğanın kalbinde, anıların izinde...</p>
+  </div>
+
+  <nav class="modern-menu">
+  <ul>
+    <li><a href="anasayfa.html#home">Ana Sayfa</a></li>
+    <li><a href="hikaye.html">Hikaye</a></li>
+    <li><a href="galeri.html">Galeri</a></li>
+    <li><a href="anasayfa.html#contact">İletişim</a></li>
+  </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Hoş Geldiniz</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="images/slide1.jpg" alt="Epoksi masa" class="slide active">
+        <img src="images/slide2.jpg" alt="Ahşap detay" class="slide">
+        <img src="images/slide3.jpg" alt="Atölye sahnesi" class="slide">
+      </div>
+      <div class="slide-controls">
+        <button onclick="showSlide(0)">1</button>
+        <button onclick="showSlide(1)">2</button>
+        <button onclick="showSlide(2)">3</button>
+      </div>
+    </div>
+    <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir dijital yuvadır.</p>
+  </section>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p><strong>Adres:</strong> Dereboğazı Mah. Atatürk Blv. No:282/A <strong>Hendek/SAKARYA</strong></p>
+    <p><strong>E-posta:</strong> <a href="mailto:info@ahsapkalesi.com">info@ahsapkalesi.com</a></p>
+    <p><strong>Telefon:</strong> +905394777766</p>
+    <p><strong>Mehmet ALTIN</strong></p>
+  </section>
+  
+  <section>
+    <form class="contact-form" onsubmit="return showThankYouMessage(event)">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+  <section>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Dereboğazı+Mah.+Atatürk+Blv.+No:282/A+Hendek+SAKARYA&hl=tr&output=embed"
+        width="100%"
+        height="300"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  // Başlangıçta ilk slaytı göster
+  document.addEventListener("DOMContentLoaded", () => showSlide(0));
+</script>
+<script>
+  function showThankYouMessage(event) {
+    event.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+
+    const form = document.querySelector('.contact-form');
+    form.innerHTML = `
+      <h3 style="color:#a0522d;">Teşekkür ederiz!</h3>
+      <p>Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.</p>
+    `;
+
+    return false;
+  }
+</script>
+<script>
+  window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
+     

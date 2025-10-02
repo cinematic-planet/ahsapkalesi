@@ -1,0 +1,192 @@
+/* Temel Ayarlar */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #fdf6ec;
+  color: #3e2f1c;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Menü */
+.modern-menu {
+  background: linear-gradient(to right, #e0c097, #d4b483);
+  padding: 12px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.modern-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.modern-menu li a {
+  text-decoration: none;
+  color: #3e2f1c;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.modern-menu li a:hover,
+.modern-menu li a:active,
+.modern-menu li a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #a0522d;
+  transform: scale(1.05);
+}
+
+/* Sayfa Başlığı */
+.page-title {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.page-title h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  color: #4b3f2f;
+  margin: 0;
+}
+
+.page-title p {
+  font-style: italic;
+  color: #6e4b2f;
+  margin-top: 5px;
+}
+
+/* Genel Bölüm */
+section, main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Galeri ve Fotoğraf Grid */
+.gallery-grid, .video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item img,
+.gallery-grid img,
+.video-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover,
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+.video-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #4b3f2f;
+}
+
+/* İletişim */
+.contact-info p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #4b3f2f;
+}
+
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #8b4513;
+}
+
+/* Harita */
+.map-container {
+  max-height: 300px;
+  margin-top: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0e1c6;
+  font-size: 0.9em;
+  color: #3e2f1c;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2f1c;
+  text-decoration: underline;
+  font-weight: 600;
+}

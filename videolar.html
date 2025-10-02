@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahsapkalesi'nin hikayesi: doğayla kurulan bağ, Mehmet Altın’ın ustalığı ve dijital yansıması.">
-  <meta name="keywords" content="ahşap, epoksi, atölye, hikaye, doğa, sanat, Ahsapkalesi">
-  <title>Hikaye – Ahsapkalesi</title>
+  <meta name="description" content="Ahsapkalesi'nin video arşivi: atölye, detaylar ve doğa ile ilgili özel görüntüler.">
+  <meta name="keywords" content="ahşap, epoksi, atölye, doğa, sanat, video, Ahsapkalesi">
+  <title>Videolar | Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"> <!-- Ortak stil dosyası -->
   <style>
@@ -67,54 +67,65 @@
     .modern-menu li a.active {
       background-color: rgba(255, 255, 255, 0.3);
       color: #a0522d;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     .page-title {
       text-align: center;
-      margin: 20px 0 10px;
+      margin: 40px 0 20px;
     }
 
     .page-title h1 {
       font-family: 'Dancing Script', cursive;
       font-size: 3em;
       color: #4b3f2f;
-      margin: 0;
+      margin-bottom: 10px;
     }
 
     .page-title p {
       font-style: italic;
       color: #6e4b2f;
-      margin-top: 5px;
     }
 
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: 40px auto;
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .video-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-item h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
       color: #4b3f2f;
     }
 
-    .story-text {
-      font-size: 1.1em;
-      line-height: 1.8;
-      text-align: justify;
-      color: #4b3f2f;
+    .video-item video {
+      width: 100%;
+      max-height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: #f0e1c6;
-      color: #3e2f1c;
       font-size: 0.9em;
+      color: #3e2f1c;
       margin-top: 40px;
     }
 
@@ -134,29 +145,46 @@
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="hikaye.html" class="active">Hikaye</a></li>
+      <li><a href="hikaye.html">Hikaye</a></li>
       <li><a href="galeri.html">Galeri</a></li>
       <li><a href="fotograflar.html">Fotoğraflar</a></li>
-      <li><a href="videolar.html">Videolar</a></li>
+      <li><a href="videolar.html" class="active">Videolar</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
   </nav>
 
   <div class="page-title" aria-label="Sayfa başlığı">
-    <h1>Hikaye</h1>
-    <p>Her iz, bir yaşamın yankısıdır...</p>
+    <h1>Videolar</h1>
+    <p>Her hareket bir hikaye, her ses bir iz...</p>
   </div>
 
-  <section id="story">
-    <h2>Ahşabın Ardındaki Hikaye</h2>
-    <div class="story-text">
-      <p>Bir ağacın gövdesinde başlayan yolculuk, Mehmet Altın’ın ellerinde bir yaşam alanına dönüşür. Her kıymık, her damar, geçmişin izlerini taşır. Ahsapkalesi, sadece bir atölye değil; doğayla kurulan bir bağın, sabırla işlenen bir emeğin ve içten gelen bir hikâyenin dijital yansımasıdır.</p>
-
-      <p>Bu hikâye, Hendek’in sessiz sokaklarında başlar. Mehmet Usta, sabahın erken saatlerinde talaş kokusuyla uyanır. Her masa, her sehpa, bir duanın, bir hayalin izini taşır. Epoksiyle birleşen ahşap, zamanın içinden süzülerek bugüne ulaşır.</p>
-
-      <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir köprüdür. Her ziyaretçi, bu hikâyenin bir parçası olur. Ve her parça, bir yaşamın yankısıdır...</p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <div class="video-grid">
+        <div class="video-item">
+          <h3>Atölye Görüntüleri</h3>
+          <video controls preload="metadata">
+            <source src="videos/atolye.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+        </div>
+        <div class="video-item">
+          <h3>Ahşap Detaylar</h3>
+          <video controls preload="metadata">
+            <source src="videos/detaylar.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+        </div>
+        <div class="video-item">
+          <h3>Doğayla Bütünleşme</h3>
+          <video controls preload="metadata">
+            <source src="videos/doga.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>Copyright&copy; 2025 Ahşap Kalesi</p>

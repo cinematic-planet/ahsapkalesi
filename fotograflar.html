@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahsapkalesi'nin hikayesi: doğayla kurulan bağ, Mehmet Altın’ın ustalığı ve dijital yansıması.">
-  <meta name="keywords" content="ahşap, epoksi, atölye, hikaye, doğa, sanat, Ahsapkalesi">
-  <title>Hikaye – Ahsapkalesi</title>
+  <meta name="description" content="Ahsapkalesi'nin fotoğraf arşivinde epoksi masalar, ahşap detaylar ve atölye sahneleriyle her karede bir anı keşfedin.">
+  <meta name="keywords" content="ahşap, epoksi, masa, atölye, doğa, sanat, fotoğraf, Ahsapkalesi">
+  <title>Fotoğraflar | Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"> <!-- Ortak stil dosyası -->
   <style>
@@ -72,14 +72,14 @@
 
     .page-title {
       text-align: center;
-      margin: 20px 0 10px;
+      margin: 40px 0 20px;
     }
 
     .page-title h1 {
       font-family: 'Dancing Script', cursive;
-      font-size: 3em;
+      font-size: 2.5em;
       color: #4b3f2f;
-      margin: 0;
+      margin-bottom: 10px;
     }
 
     .page-title p {
@@ -88,34 +88,37 @@
       margin-top: 5px;
     }
 
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: center;
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #4b3f2f;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .story-text {
-      font-size: 1.1em;
-      line-height: 1.8;
-      text-align: justify;
-      color: #4b3f2f;
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: #f0e1c6;
-      color: #3e2f1c;
       font-size: 0.9em;
-      margin-top: 40px;
+      color: #3e2f1c;
     }
 
     footer a {
@@ -134,29 +137,27 @@
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="hikaye.html" class="active">Hikaye</a></li>
+      <li><a href="hikaye.html">Hikaye</a></li>
       <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="fotograflar.html">Fotoğraflar</a></li>
+      <li><a href="fotograflar.html" class="active">Fotoğraflar</a></li>
       <li><a href="videolar.html">Videolar</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
   </nav>
 
   <div class="page-title" aria-label="Sayfa başlığı">
-    <h1>Hikaye</h1>
-    <p>Her iz, bir yaşamın yankısıdır...</p>
+    <h1>Fotoğraflar</h1>
+    <p>Her karede bir anı, her detayda bir ruh...</p>
   </div>
 
-  <section id="story">
-    <h2>Ahşabın Ardındaki Hikaye</h2>
-    <div class="story-text">
-      <p>Bir ağacın gövdesinde başlayan yolculuk, Mehmet Altın’ın ellerinde bir yaşam alanına dönüşür. Her kıymık, her damar, geçmişin izlerini taşır. Ahsapkalesi, sadece bir atölye değil; doğayla kurulan bir bağın, sabırla işlenen bir emeğin ve içten gelen bir hikâyenin dijital yansımasıdır.</p>
-
-      <p>Bu hikâye, Hendek’in sessiz sokaklarında başlar. Mehmet Usta, sabahın erken saatlerinde talaş kokusuyla uyanır. Her masa, her sehpa, bir duanın, bir hayalin izini taşır. Epoksiyle birleşen ahşap, zamanın içinden süzülerek bugüne ulaşır.</p>
-
-      <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir köprüdür. Her ziyaretçi, bu hikâyenin bir parçası olur. Ve her parça, bir yaşamın yankısıdır...</p>
+  <main>
+    <div class="gallery-grid">
+      <img src="images/slide1.jpg" alt="Epoksi masa" loading="lazy">
+      <img src="images/slide2.jpg" alt="Ahşap detay" loading="lazy">
+      <img src="images/slide3.jpg" alt="Atölye sahnesi" loading="lazy">
+      <!-- Yeni fotoğraflar buraya eklenebilir -->
     </div>
-  </section>
+  </main>
 
   <footer>
     <p>Copyright&copy; 2025 Ahşap Kalesi</p>

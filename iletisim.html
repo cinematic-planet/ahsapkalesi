@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahsapkalesi: Doğanın kalbinde, geçmişin sıcaklığıyla örülmüş dijital bir yuva.">
-  <meta name="keywords" content="ahşap, epoksi, atölye, masa, doğa, sanat, Ahsapkalesi">
-  <title>Ahsapkalesi</title>
+  <meta name="description" content="Ahsapkalesi ile iletişime geçin. Adres, e-posta, telefon ve iletişim formu ile doğrudan ulaşın.">
+  <meta name="keywords" content="iletişim, ahşap, epoksi, Hendek, Sakarya, Mehmet Altın, Ahsapkalesi, adres, telefon, e-posta, iletişim formu">
+  <title>İletişim – Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"> <!-- Ortak stil dosyası -->
   <style>
@@ -16,8 +16,8 @@
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      color: #3e2f1c;
       background-color: #fdf6ec;
+      color: #3e2f1c;
     }
 
     .banner {
@@ -95,57 +95,61 @@
       text-align: center;
     }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
+    .contact-info p {
+      font-size: 1.1em;
+      margin: 10px 0;
       color: #4b3f2f;
     }
 
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .slides {
+    .contact-form {
+      margin-top: 30px;
       display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .slide {
-      display: none;
+    .contact-form label {
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
       width: 100%;
-      height: auto;
-      object-fit: cover;
+      max-width: 500px;
+      text-align: left;
     }
 
-    .slide.active {
-      display: block;
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Lato', sans-serif;
+      font-size: 1em;
     }
 
-    .slide-controls {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .slide-controls button {
+    .contact-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
       background-color: #a0522d;
       color: white;
       border: none;
-      padding: 6px 12px;
-      margin: 0 5px;
       border-radius: 6px;
+      font-size: 1em;
       cursor: pointer;
-      font-weight: bold;
       transition: background-color 0.3s ease;
     }
 
-    .slide-controls button:hover {
+    .contact-form button:hover {
       background-color: #8b4513;
+    }
+
+    .map-container {
+      max-height: 300px;
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -172,35 +176,54 @@
 
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
-      <li><a href="index.html" class="active">Ana Sayfa</a></li>
+      <li><a href="index.html">Ana Sayfa</a></li>
       <li><a href="hikaye.html">Hikaye</a></li>
       <li><a href="galeri.html">Galeri</a></li>
       <li><a href="fotograflar.html">Fotoğraflar</a></li>
       <li><a href="videolar.html">Videolar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="iletisim.html" class="active">İletişim</a></li>
     </ul>
   </nav>
 
   <div class="page-title" aria-label="Sayfa başlığı">
-    <h1>Ahsapkalesi</h1>
-    <p>Doğanın kalbinde, anıların izinde...</p>
+    <h1>İletişim</h1>
+    <p>Bir iz bırakmak istersen, buradayız...</p>
   </div>
 
-  <section id="home">
-    <h2>Hoş Geldiniz</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="images/slide1.jpg" alt="Ahşap yüzeyin dokusu" class="slide active">
-        <img src="images/slide2.jpg" alt="Epoksi masa detayları" class="slide">
-        <img src="images/slide3.jpg" alt="Atölyede üretim sahnesi" class="slide">
-      </div>
-      <div class="slide-controls">
-        <button onclick="showSlide(0)">1</button>
-        <button onclick="showSlide(1)">2</button>
-        <button onclick="showSlide(2)">3</button>
-      </div>
+  <section>
+    <div class="contact-info">
+      <p><strong>Adres:</strong> Dereboğazı Mah. Atatürk Blv. No:282/A <strong>Hendek/SAKARYA</strong></p>
+      <p><strong>E-posta:</strong> <a href="mailto:info@ahsapkalesi.com">info@ahsapkalesi.com</a></p>
+      <p><strong>Telefon:</strong> +90 539 477 77 66</p>
+      <p><strong>İlgili Kişi:</strong> Mehmet ALTIN</p>
     </div>
-    <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir dijital yuvadır.</p>
+
+    <form class="contact-form" onsubmit="return showThankYouMessage(event)" aria-label="İletişim Formu">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+    <div id="thank-you" style="margin-top:20px; color:#a0522d;"></div>
+
+    <div class="map-container" aria-label="Konum Haritası">
+      <iframe
+        title="Ahsapkalesi Konumu"
+        src="https://www.google.com/maps?q=Dereboğazı+Mah.+Atatürk+Blv.+No:282/A+Hendek+SAKARYA&hl=tr&output=embed"
+        width="100%"
+        height="300"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
   <footer>
@@ -210,32 +233,13 @@
   </footer>
 
   <script>
-    function showSlide(index) {
-      const slides = document.querySelectorAll('.slide');
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => showSlide(0));
-
-    window.addEventListener('load', function() {
-      const hash = window.location.hash;
-      if (hash) {
-        const target = document.querySelector(hash);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-
-    // Otomatik geçiş (isteğe bağlı)
-    let currentSlide = 0;
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % 3;
-      showSlide(currentSlide);
-    }, 5000);
-  </script>
-
-</body>
-</html>
+  function showThankYouMessage(event) {
+    event.preventDefault();
+    document.getElementById('thank-you').innerHTML = `
+      <h3>Teşekkür ederiz!</h3>
+      <p>Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.</p>
+    `;
+    document.querySelector('.contact-form').reset();
+    return false;
+  }
+</script>

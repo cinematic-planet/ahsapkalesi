@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobil Menü Denemesi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #fdf6ec;
+      color: #3e2f1c;
+    }
+
+    .modern-menu {
+      background: linear-gradient(to right, #e0c097, #d4b483);
+      padding: 12px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .modern-menu ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .modern-menu li a {
+      text-decoration: none;
+      color: #3e2f1c;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .modern-menu li a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #a0522d;
+    }
+
+    @media (max-width: 768px) {
+      .modern-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 12px;
+      }
+
+      .modern-menu li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-bottom: 1px solid rgba(62, 47, 28, 0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="modern-menu">
+    <ul>
+      <li><a href="#">Ana Sayfa</a></li>
+      <li><a href="#">Hikaye</a></li>
+      <li><a href="#">Galeri</a></li>
+      <li><a href="#">Fotoğraflar</a></li>
+      <li><a href="#">Videolar</a></li>
+      <li><a href="#">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h1>Mobil Menü Testi</h1>
+    <p>Bu sayfa mobil menü davranışını test etmek için oluşturulmuştur.</p>
+  </section>
+
+</body>
+</html>

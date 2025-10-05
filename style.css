@@ -66,6 +66,23 @@ body {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .modern-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 24px;
+    overflow-x: visible;
+  }
+
+  .modern-menu li a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid rgba(62, 47, 28, 0.2);
+  }
+}
+
 /* Sayfa Başlığı */
 .page-title {
   text-align: center;

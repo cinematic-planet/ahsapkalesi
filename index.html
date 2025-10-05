@@ -43,17 +43,17 @@
     }
 
     .modern-menu ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 12px;
-  gap: 24px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    gap: 24px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    }
 
     .modern-menu li a {
       text-decoration: none;
@@ -72,117 +72,148 @@
       color: #a0522d;
       transform: scale(1.05);
     }
+  
+    .modern-menu li a {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border-bottom: 1px solid rgba(62, 47, 28, 0.2);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2.0em;
+      cursor: pointer;
+      color: #3e2f1c;
+      cursor: pointer;
+    }
+
+    .menu-list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
     @media (max-width: 768px) {
-  .modern-menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 24px;
-    overflow-x: visible;
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu-list {
+        display: none;
+        flex-direction: column;
+        background-color: #fdf6ec;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .menu-list.show {
+        display: flex;
+      }
+    }
+  
+  /* The following styles should be outside the media query */
+  .page-title {
+    text-align: center;
+    margin: 20px 0 10px;
   }
 
-  .modern-menu li a {
-    display: block;
+  .page-title h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #4b3f2f;
+    margin: 0;
+  }
+
+  .page-title p {
+    font-style: italic;
+    color: #6e4b2f;
+    margin-top: 5px;
+  }
+
+  section {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #4b3f2f;
+  }
+
+  .slider {
+    position: relative;
     width: 100%;
-    padding: 12px;
-    border-bottom: 1px solid rgba(62, 47, 28, 0.2);
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-}
 
-    .page-title {
-      text-align: center;
-      margin: 20px 0 10px;
-    }
+  .slides {
+    display: flex;
+  }
 
-    .page-title h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3em;
-      color: #4b3f2f;
-      margin: 0;
-    }
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-    .page-title p {
-      font-style: italic;
-      color: #6e4b2f;
-      margin-top: 5px;
-    }
+  .slide.active {
+    display: block;
+  }
 
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: center;
-    }
+  .slide-controls {
+    margin-top: 10px;
+    text-align: center;
+  }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #4b3f2f;
-    }
+  .slide-controls button {
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
 
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+  .slide-controls button:hover {
+    background-color: #8b4513;
+  }
 
-    .slides {
-      display: flex;
-    }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0e1c6;
+    color: #3e2f1c;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
 
-    .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .slide-controls {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .slide-controls button {
-      background-color: #a0522d;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      margin: 0 5px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .slide-controls button:hover {
-      background-color: #8b4513;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f0e1c6;
-      color: #3e2f1c;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #3e2f1c;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-  </style>
+  footer a {
+    color: #3e2f1c;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+    </style>
 </head>
 <body>
 
@@ -195,7 +226,7 @@
     <ul>
       <li><a href="index.html" class="active">Ana Sayfa</a></li>
       <li><a href="hikaye.html" class="active">Hikaye</a></li>
-      <li><a href="galeri.html" class="active"></a>Galeri</a></li>
+      <li><a href="galeri.html" class="active">Galeri</a></li>
       <li><a href="fotograflar.html" class="active">Fotoğraflar</a></li>
       <li><a href="videolar.html" class="active">Videolar</a></li>
       <li><a href="iletisim.html" class="active">İletişim</a></li>
@@ -204,7 +235,7 @@
 
   <div class="page-title" aria-label="Sayfa başlığı">
     <h1>Ahsapkalesi</h1>
-    <p>Doğanın kalbinde, anıların izinde...</p>
+    <p>Doğanın kalbinde, anıların izinde... </p>
   </div>
 
   <section id="home">

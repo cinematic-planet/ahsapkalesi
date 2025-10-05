@@ -32,6 +32,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow: x-auto;
 }
 
 .modern-menu ul {
@@ -42,6 +43,9 @@ body {
   margin: 0;
   padding: 0;
   gap: 40px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modern-menu li a {

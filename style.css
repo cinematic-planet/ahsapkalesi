@@ -204,6 +204,59 @@ footer a {
   font-weight: 600;
 }
 
+/* Mobil Menü */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #f0e1c6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hidden-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.hidden-menu.active {
+  transform: translateX(0);
+}
+
+.hidden-menu ul {
+  list-style: none;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.hidden-menu li {
+  margin: 20px 0;
+}
+
+.hidden-menu a {
+  text-decoration: none;
+  color: #3e2f1c;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hidden-menu a:hover {
+  color: #a0522d;
+}
+
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
   .modern-menu ul {

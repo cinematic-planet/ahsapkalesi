@@ -5,26 +5,30 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   background-color: #fdf6ec;
   color: #3e2f1c;
+  overflow-x: hidden;
 }
 
 /* Banner */
 .banner {
   width: 100%;
-  height: 300px;
+  height: auto;
+  max-height: 400px;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
-/* Menü */
+/* Modern Menü */
 .modern-menu {
   background: linear-gradient(to right, #e0c097, #d4b483);
   padding: 12px 0;
@@ -36,6 +40,7 @@ body {
 
 .modern-menu ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   list-style: none;
@@ -48,6 +53,7 @@ body {
   text-decoration: none;
   color: #3e2f1c;
   font-weight: 600;
+  font-family: 'Lato', sans-serif;
   padding: 8px 16px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -80,7 +86,7 @@ body {
   margin-top: 5px;
 }
 
-/* Genel Bölüm */
+/* İçerik Bölümü */
 section, main {
   padding: 40px 20px;
   max-width: 1200px;
@@ -88,7 +94,14 @@ section, main {
   text-align: center;
 }
 
-/* Galeri ve Fotoğraf Grid */
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #4b3f2f;
+}
+
+/* Galeri ve Video Grid */
 .gallery-grid, .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -189,4 +202,31 @@ footer a {
   color: #3e2f1c;
   text-decoration: underline;
   font-weight: 600;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .modern-menu ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .modern-menu li a {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .page-title h1 {
+    font-size: 2.2em;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .banner {
+    max-height: 300px;
+  }
 }

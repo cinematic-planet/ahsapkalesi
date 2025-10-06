@@ -27,7 +27,7 @@
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <nav id="mobilMenu" class="hidden-menu">
+  <nav id="mobileMenu" class="hidden-menu">
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
       <li><a href="hikaye.html">Hikaye</a></li>
@@ -65,6 +65,11 @@
       let current = Array.from(slides).findIndex(s => s.classList.contains('active'));
       showSlide((current + 1) % slides.length);
     }, 5000);
+
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden-menu');
+    }
   </script>
 
 </body>

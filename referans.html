@@ -27,7 +27,7 @@
   </nav>
 
   <nav class="menu-toggle" onclick="toggleMenu()">☰</nav>
-  <nav id="mobilMenu" class="hidden-menu">
+  <nav id="mobileMenu" class="hidden-menu">
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
       <li><a href="hikaye.html">Hikaye</a></li>
@@ -67,6 +67,13 @@
     <p>Web Sayfası: <a href="http://www.ahsapkalesi.com" target="_blank" rel="noopener">www.ahsapkalesi.com</a></p>
     <p>Ahşap Kalesi telif hakları Mehmet ALTIN'a aittir.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden-menu');
+    }
+  </script>
 
 </body>
 </html>

@@ -7,7 +7,6 @@
   <meta name="keywords" content="ahşap, epoksi, atölye, masa, doğa, sanat, Ahsapkalesi">
   <title>Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- Ortak stil dosyası -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -15,20 +14,23 @@
 
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Lato', sans-serif;
       color: #3e2f1c;
       background-color: #fdf6ec;
+      overflow-x: hidden;
     }
 
     .banner {
       width: 100%;
-      height: 300px;
+      height: auto;
+      max-height: 300px;
       overflow: hidden;
     }
 
     .banner img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
       display: block;
     }
@@ -44,6 +46,7 @@
 
     .modern-menu ul {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       list-style: none;
@@ -162,6 +165,28 @@
       text-decoration: underline;
       font-weight: 600;
     }
+
+    @media (max-width: 768px) {
+      .modern-menu ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 20px;
+      }
+
+      .modern-menu li a {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      .page-title h1 {
+        font-size: 2.2em;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -172,12 +197,12 @@
 
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
-      <li><a href="index.html" class="active">Ana Sayfa</a></li>
-      <li><a href="hikaye.html">Hikaye</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="fotograflar.html">Fotoğraflar</a></li>
-      <li><a href="videolar.html">Videolar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="#home" class="active">Ana Sayfa</a></li>
+      <li><a href="#hikaye">Hikaye</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#fotograflar">Fotoğraflar</a></li>
+      <li><a href="#videolar">Videolar</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
     </ul>
   </nav>
 
@@ -203,7 +228,7 @@
     <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir dijital yuvadır.</p>
   </section>
 
-  <footer>
+  <footer id="iletisim">
     <p>Copyright&copy; 2025 Ahşap Kalesi</p>
     <p>Web Sayfası: <a href="http://www.ahsapkalesi.com" target="_blank" rel="noopener">www.ahsapkalesi.com</a></p>
     <p>Ahşap Kalesi telif hakları Mehmet ALTIN'a aittir.</p>
@@ -219,21 +244,10 @@
 
     document.addEventListener("DOMContentLoaded", () => showSlide(0));
 
-    window.addEventListener('load', function() {
-      const hash = window.location.hash;
-      if (hash) {
-        const target = document.querySelector(hash);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-
-    // Otomatik geçiş (isteğe bağlı)
-    let currentSlide = 0;
     setInterval(() => {
-      currentSlide = (currentSlide + 1) % 3;
-      showSlide(currentSlide);
+      const slides = document.querySelectorAll('.slide');
+      let current = Array.from(slides).findIndex(s => s.classList.contains('active'));
+      showSlide((current + 1) % slides.length);
     }, 5000);
   </script>
 

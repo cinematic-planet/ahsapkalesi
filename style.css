@@ -282,4 +282,8 @@ footer a {
   .banner {
     max-height: 300px;
   }
+
+  .modern-menu { 
+    display: none;
+  }
 }

@@ -3,188 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahsapkalesi'nin video arşivi: atölye, detaylar ve doğa ile ilgili özel görüntüler.">
-  <meta name="keywords" content="ahşap, epoksi, atölye, doğa, sanat, video, Ahsapkalesi">
-  <title>Videolar | Ahsapkalesi</title>
+  <meta name="description" content="Ahşap Kalesi'nin videoları: üretim süreci, detaylar ve anlatımlar.">
+  <meta name="keywords" content="ahşap, epoksi, video, üretim, anlatım, Ahsapkalesi">
+  <title>Videolar – Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- Ortak stil dosyası -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #fdf6ec;
-      color: #3e2f1c;
-    }
-
-    .banner {
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
-
-    .banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .modern-menu {
-      background: linear-gradient(to right, #e0c097, #d4b483);
-      padding: 12px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .modern-menu ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 40px;
-    }
-
-    .modern-menu li a {
-      text-decoration: none;
-      color: #3e2f1c;
-      font-weight: 600;
-      font-family: 'Lato', sans-serif;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .modern-menu li a:hover,
-    .modern-menu li a:active,
-    .modern-menu li a.active {
-      background-color: rgba(255, 255, 255, 0.3);
-      color: #a0522d;
-      transform: scale(1.08);
-    }
-
-    .page-title {
-      text-align: center;
-      margin: 40px 0 20px;
-    }
-
-    .page-title h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3em;
-      color: #4b3f2f;
-      margin-bottom: 10px;
-    }
-
-    .page-title p {
-      font-style: italic;
-      color: #6e4b2f;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .video-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .video-item h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      color: #4b3f2f;
-    }
-
-    .video-item video {
-      width: 100%;
-      max-height: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f0e1c6;
-      font-size: 0.9em;
-      color: #3e2f1c;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #3e2f1c;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="banner">
-    <img src="images/ahsapkalesi-header.jpg" alt="Ahsapkalesi atölyesinden bir manzara">
+    <img src="images/ahsapkalesi-header.jpg" alt="Ahşap Kalesi'nin üretim sürecinden bir kare">
   </div>
 
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
       <li><a href="hikaye.html">Hikaye</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="referans.html">Referanslar</a></li>
       <li><a href="fotograflar.html">Fotoğraflar</a></li>
       <li><a href="videolar.html" class="active">Videolar</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
   </nav>
 
-  <div class="page-title" aria-label="Sayfa başlığı">
+  <div class="page-title">
     <h1>Videolar</h1>
-    <p>Her hareket bir hikaye, her ses bir iz...</p>
+    <p>Her hareket bir ritim, her anlatım bir iz...</p>
   </div>
 
-  <main>
-    <section>
-      <div class="video-grid">
-        <div class="video-item">
-          <h3>Atölye Görüntüleri</h3>
-          <video controls preload="metadata">
-            <source src="videos/atolye.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
-        <div class="video-item">
-          <h3>Ahşap Detaylar</h3>
-          <video controls preload="metadata">
-            <source src="videos/detaylar.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
-        <div class="video-item">
-          <h3>Doğayla Bütünleşme</h3>
-          <video controls preload="metadata">
-            <source src="videos/doga.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
+  <section>
+    <h2>Üretim Sürecinden Anlatımlar</h2>
+    <div class="video-grid">
+      <div class="video-item">
+        <h3>Epoksi Döküm Aşamaları</h3>
+        <video controls>
+          <source src="videos/epoksi.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
       </div>
-    </section>
-  </main>
+      <div class="video-item">
+        <h3>Doğal Ahşap Seçimi</h3>
+        <video controls>
+          <source src="videos/ahsap-secimi.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
+      </div>
+      <div class="video-item">
+        <h3>Atölyede Bir Gün</h3>
+        <video controls>
+          <source src="videos/atolye.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
+      </div>
+    </div>
+    <p>Bu videolar, Ahşap Kalesi'nin üretim sürecini ve ruhunu yansıtır. Her sahne, bir emek ve bir anlatıdır.</p>
+  </section>
 
   <footer>
     <p>Copyright&copy; 2025 Ahşap Kalesi</p>

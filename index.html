@@ -7,187 +7,7 @@
   <meta name="keywords" content="ahşap, epoksi, atölye, masa, doğa, sanat, Ahsapkalesi">
   <title>Ahsapkalesi</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Lato', sans-serif;
-      color: #3e2f1c;
-      background-color: #fdf6ec;
-      overflow-x: hidden;
-    }
-
-    .banner {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      overflow: hidden;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
-
-    .modern-menu {
-      background: linear-gradient(to right, #e0c097, #d4b483);
-      padding: 12px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .modern-menu ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 40px;
-    }
-
-    .modern-menu li a {
-      text-decoration: none;
-      color: #3e2f1c;
-      font-weight: 600;
-      font-family: 'Lato', sans-serif;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .modern-menu li a:hover,
-    .modern-menu li a:active,
-    .modern-menu li a.active {
-      background-color: rgba(255, 255, 255, 0.3);
-      color: #a0522d;
-      transform: scale(1.05);
-    }
-
-    .page-title {
-      text-align: center;
-      margin: 20px 0 10px;
-    }
-
-    .page-title h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3em;
-      color: #4b3f2f;
-      margin: 0;
-    }
-
-    .page-title p {
-      font-style: italic;
-      color: #6e4b2f;
-      margin-top: 5px;
-    }
-
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: center;
-    }
-
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #4b3f2f;
-    }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .slides {
-      display: flex;
-    }
-
-    .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .slide-controls {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .slide-controls button {
-      background-color: #a0522d;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      margin: 0 5px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .slide-controls button:hover {
-      background-color: #8b4513;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f0e1c6;
-      color: #3e2f1c;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #3e2f1c;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .modern-menu ul {
-        flex-direction: column;
-        gap: 12px;
-        padding: 0 20px;
-      }
-
-      .modern-menu li a {
-        display: block;
-        text-align: center;
-        font-size: 1rem;
-      }
-
-      .page-title h1 {
-        font-size: 2.2em;
-      }
-
-      section {
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -197,38 +17,22 @@
 
   <nav class="modern-menu" aria-label="Ana menü">
     <ul>
-      <li><a href="#home" class="active">Ana Sayfa</a></li>
-      <li><a href="#hikaye">Hikaye</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#fotograflar">Fotoğraflar</a></li>
-      <li><a href="#videolar">Videolar</a></li>
-      <li><a href="#iletisim">İletişim</a></li>
+      <li><a href="index.html" class="active">Ana Sayfa</a></li>
+      <li><a href="hikaye.html">Hikaye</a></li>
+      <li><a href="referans.html">Referanslar</a></li>
+      <li><a href="fotograflar.html">Fotoğraflar</a></li>
+      <li><a href="videolar.html">Videolar</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
     </ul>
   </nav>
 
   <div class="page-title" aria-label="Sayfa başlığı">
-    <h1>Ahsapkalesi</h1>
+    <h1>Hoş Geldiniz</h1>
     <p>Doğanın kalbinde, anıların izinde...</p>
+    <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir dijital yuvadır.</p>
   </div>
 
-  <section id="home">
-    <h2>Hoş Geldiniz</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="images/slide1.jpg" alt="Ahşap yüzeyin dokusu" class="slide active">
-        <img src="images/slide2.jpg" alt="Epoksi masa detayları" class="slide">
-        <img src="images/slide3.jpg" alt="Atölyede üretim sahnesi" class="slide">
-      </div>
-      <div class="slide-controls">
-        <button onclick="showSlide(0)">1</button>
-        <button onclick="showSlide(1)">2</button>
-        <button onclick="showSlide(2)">3</button>
-      </div>
-    </div>
-    <p>Ahsapkalesi, geçmişin sıcaklığıyla geleceğe uzanan bir dijital yuvadır.</p>
-  </section>
-
-  <footer id="iletisim">
+  <footer>
     <p>Copyright&copy; 2025 Ahşap Kalesi</p>
     <p>Web Sayfası: <a href="http://www.ahsapkalesi.com" target="_blank" rel="noopener">www.ahsapkalesi.com</a></p>
     <p>Ahşap Kalesi telif hakları Mehmet ALTIN'a aittir.</p>

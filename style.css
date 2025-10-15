@@ -207,9 +207,8 @@ footer a {
 /* Mobil Menü */
 .menu-toggle {
   position: absolute;
-  bottom: 20px;
-  top: 20px;
-  left: 20px;
+  top: 75px;
+  left: 10px;
   font-size: 24px;
   cursor: pointer;
   z-index: 1000;
@@ -261,6 +260,7 @@ footer a {
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
   .modern-menu ul {
+    display: block;
     flex-direction: column;
     gap: 12px;
     padding: 0 20px;

@@ -50,27 +50,7 @@
     <p>Ahşap Kalesi telif hakları Mehmet ALTIN'a aittir.</p>
   </footer>
 
-  <script>
-    function showSlide(index) {
-      const slides = document.querySelectorAll('.slide');
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => showSlide(0));
-
-    setInterval(() => {
-      const slides = document.querySelectorAll('.slide');
-      let current = Array.from(slides).findIndex(s => s.classList.contains('active'));
-      showSlide((current + 1) % slides.length);
-    }, 5000);
-
-    function toggleMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('hidden-menu');
-    }
-  </script>
+  <script src="ahsapkalesi.js"></script>
 
 </body>
 </html>

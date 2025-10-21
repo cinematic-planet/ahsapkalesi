@@ -83,22 +83,7 @@
     <p>Ahşap Kalesi telif hakları Mehmet ALTIN'a aittir.</p>
   </footer>
 
-  <script>
-    function showThankYouMessage(event) {
-      event.preventDefault();
-      document.getElementById('thank-you').innerHTML = `
-        <h3>Teşekkür ederiz!</h3>
-        <p>Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.</p>
-      `;
-      document.querySelector('.contact-form').reset();
-      return false;
-    }
-
-    function toggleMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('hidden-menu');
-    }
-  </script>
+  <script src="ahsapkalesi.js"></script>
 
 </body>
 </html>
